@@ -144,6 +144,7 @@ def main():
                                             print("\n")
                                             print('Your account password has been created successfully')
                                             print("-"*100)
+                                            break
                                             
                                         elif key == "cs" :
                                             print("\n")
