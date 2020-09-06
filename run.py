@@ -204,6 +204,22 @@ def main():
                                         print("\n")
                                         print("That account does not exist")
                                         print("-"*100)
+                        
+                            elif shortCode == 'copy':
+                                        print("\n")
+                                        print("Enter the account name of password you want to copy")
+
+                                        search_account = input()
+                                        if check_existing_account(search_account):
+                                                copy_password(search_account)
+                                                print("\n")
+                                                print('Password has been copied')
+                                                print("-"*100)
+                                            
+                                        else:
+                                                print("\n")
+                                                print("That account does not exist")
+                                                print("-"*100)
                 
                 else:
                     print("\n")
