@@ -87,7 +87,15 @@ def main():
                 print("\n")
                 username = input("Enter new Username: ")
                 password = input("Enter new password: ")
-                
+
+                exists = check_user(username, password)
+
+                if exists:
+                    print("\n")
+                    print("You already have an account... Use short code sn to sign in")
+                    print("\n")
+                    continue
+
                 save_user(create_user(username,password)) #create and save new user
                 print("\n")
                 print(f"Hello {username} Your user account has been created successfully")
