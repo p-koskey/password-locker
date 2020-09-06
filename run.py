@@ -175,6 +175,20 @@ def main():
                                             print('\n')
                                             print("You dont seem to have any accounts saved yet")
                                             print("-"*100)
+                            elif shortCode == 'fn':
+
+                                    print("Enter the account name you want to search for")
+
+                                    search_account = input()
+                                    if check_existing_account(search_account):
+                                            find = find_account(search_account)
+                                            print("\n")
+                                            print(f"{find.accountname} : {find.accountpassword}")
+                                            print('-' * 100)
+                                    else:
+                                            print("\n")
+                                            print("That account  does not exist")
+                                            print("-"*100)
                 
                 else:
                     print("\n")
