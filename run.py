@@ -149,6 +149,7 @@ def main():
                                         elif key == "cs" :
                                             print("\n")
                                             acc_password = input("Enter new account password: ")
+                                            break
                                             
                                         else:
                                             print("\n")
