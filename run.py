@@ -189,6 +189,21 @@ def main():
                                             print("\n")
                                             print("That account  does not exist")
                                             print("-"*100)
+                            elif shortCode == 'del':
+                                    print("\n")
+                                    print("Enter the account name you want to delete")
+
+                                    search_account = input()
+                                    if check_existing_account(search_account):
+                                            find = find_account(search_account)
+                                            delete_credentials(find)
+                                            print("\n")
+                                            print("Credentials has been deleted")
+                                            print("-"*100)
+                                    else:
+                                        print("\n")
+                                        print("That account does not exist")
+                                        print("-"*100)
                 
                 else:
                     print("\n")
