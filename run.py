@@ -128,6 +128,33 @@ def main():
                                     print("\n")
                                     acc_name = input("Enter new account name: ")
                                     print("\n")
+                                    while True:
+                                        print("gn - if you'd like to generate a password, cs- if you'd like to create your own password")
+                                        key = input()
+                                        if key == "gn":
+                                            print("\n")
+                                            print('Please enter password length: ')
+                                            n = int(input())#password length
+                                            #allowed string constants
+                                            chars = string.ascii_letters + string.digits + string.punctuation
+                                            #generate password
+                                            password = ''.join(random.choice(chars) for _ in range(n))
+
+                                            acc_password = password
+                                            print("\n")
+                                            print('Your account password has been created successfully')
+                                            print("-"*100)
+                                            
+                                        elif key == "cs" :
+                                            print("\n")
+                                            acc_password = input("Enter new account password: ")
+                                            
+                                        else:
+                                            print("\n")
+                                            print("I really didn't get that. Please use the correct short codes")
+                                            print("-"*100)
+                                            break
+                                        
                                     save_credentials(create_credentials(acc_name,acc_password)) #create and save new account
                                     print("\n")
                                     print(f"Your credential account {acc_name} has been created successfully")
