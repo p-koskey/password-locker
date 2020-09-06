@@ -1,6 +1,8 @@
 #!/usr/bin/env python3.8
 from user import User
 from credentials import Credentials
+import random
+import string
 
 def create_user(username,password):
     '''
@@ -35,6 +37,7 @@ def save_credentials(credentials):
     function to save credentials created
     '''
     credentials.save_credentials()
+  
 
 def delete_credentials(credentials):
     '''
@@ -60,16 +63,27 @@ def display_accounts():
     '''
     return Credentials.display_credentials()
 
+def copy_password(acc_name):
+    '''
+    Function that handles the behaviour of copy email to the clipboard
+    '''
+    return Credentials.copy_password(acc_name)
+
 def main():
-     print("Hello Welcome to Password Locker")
+     print("\n")
+     print("Hello! Welcome to PASSWORD LOCKER")
+     print("-"*100)
+     print("\n")
     
      while True:
-            print("Use these short codes : nw - sign up an account, ac- sign in to your account, ex -exit Password Lockernew ")
+            print("Use these short codes : \nnw - sign up an account, \nsn- sign in to your account, \nex -exit Password Locker")
             shortCode = input().lower().strip()
             
             if shortCode == "nw" :
-                print("New User")
-                print("-"*10)
+                print("")
+                print("-"*100)
+                print("NEW USER")
+                print("-"*100)
                 print("\n")
                 username = input("Enter new Username: ")
                 password = input("Enter new password: ")
@@ -78,11 +92,20 @@ def main():
                 print("\n")
                 print(f"Hello {username} Your user account has been created successfully")
                 print("\n")
-                print("You can now login to your account... ")
+                print("You can now sign in to your account... using short code sn")
+                print("-"*100)
+                print("\n")
 
-            elif shortCode == "ac":
+            elif shortCode == "ex":
+                print("\n")
+                print("Bye!")
+                print("-"*100)
+                break
+
+            elif shortCode == "sn":
+                print("-"*100)
                 print(" Please enter your name and password:")
-                print("-"*10)
+                print("-"*100)
                 print("\n")
 
                 username = input("Username: ")
@@ -91,11 +114,36 @@ def main():
                 exists = check_user(username, password)
 
                 if exists:
+                    
                     print("\n")
-                    print(f"Hi!{username} Welcome back to your account what do you want to do today?")
-                    print("Use this short codes to let me know: cr- create new credential account, vw - view existing accounts, del- delete credential account")
+                    print(f"Hi! {username} Welcome back to your account!")
+                    print("\n")
+                    while True:
+                            print("Use these short codes :\ncr- create new credential account,\nvw - view existing accounts, \nfn - find credentials,\ndel- delete credential account,\ncopy -  copy account password\nex - exist password locker")
+                            print("\n")
+                            shortCode = input().lower().strip()
+                            if shortCode == "cr" :
+                                    print("New Credential")
+                                    print("-"*100)
+                                    print("\n")
+                                    acc_name = input("Enter new account name: ")
+                                    print("\n")
+                                    save_credentials(create_credentials(acc_name,acc_password)) #create and save new account
+                                    print("\n")
+                                    print(f"Your credential account {acc_name} has been created successfully")
+                                    print("-"*100)
+                
                 else:
-                    print("User doesnt't exist, please try to login again")
+                    print("\n")
+                    print("User doesnt't exist, please try to login again or create new account")
+                    print("-"*100)
+            
+            else:
+                print("\n")
+                print("I really didn't get that. Please use the short codes")
+                print("-"*100)
+     
+
 if __name__ == '__main__':
 
     main()

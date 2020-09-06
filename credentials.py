@@ -1,4 +1,6 @@
 import pyperclip
+import string
+import random
 class Credentials:
     """
     Class that generates new instances of credentials.
@@ -37,7 +39,7 @@ class Credentials:
         '''
 
         Credentials.cred_list.remove(self)
-
+   
     @classmethod
     def find_by_accountname(cls,acc_name):
         '''
