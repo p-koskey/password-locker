@@ -220,6 +220,16 @@ def main():
                                                 print("\n")
                                                 print("That account does not exist")
                                                 print("-"*100)
+                            elif shortCode == "ex":
+                                    print("\n")
+                                    print("Bye!")
+                                    print("-"*100)
+                                    break
+
+                            else:   
+                                    print("\n")
+                                    print("I really didn't get that. Please use the short codes")
+                                    print("-"*100)
                 
                 else:
                     print("\n")
