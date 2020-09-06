@@ -159,6 +159,22 @@ def main():
                                     print("\n")
                                     print(f"Your credential account {acc_name} has been created successfully")
                                     print("-"*100)
+                            elif shortCode == "vw":
+
+                                    if display_accounts():
+                                            print("\n")
+                                            print("Here is a list of all your credentials")
+                                            print("-"*100)
+                                            print('\n')
+
+                                            for credential in display_accounts():
+                                                    print(f"{credential.accountname}: {credential.accountpassword} ")
+
+                                            print('\n')
+                                    else:
+                                            print('\n')
+                                            print("You dont seem to have any accounts saved yet")
+                                            print("-"*100)
                 
                 else:
                     print("\n")
