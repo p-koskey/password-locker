@@ -28,3 +28,19 @@ class User:
         '''
 
         User.user_list.append(self)
+
+    @classmethod
+    def user_exist(cls,username,password):
+        '''
+        Method that checks if a user exists from the user list.
+        Args:
+           username : Name to search if it exists
+           password : To check if it exists
+        Returns :
+            Boolean: True or false depending if the account exists
+        '''
+        for user in cls.user_list:
+            if user.username == username and user.password == password:
+                    return True
+
+        return False
