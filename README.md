@@ -40,7 +40,7 @@ After creating a account and successfully signing in, you'll get another list of
 
 ## Setup and Installation
 - Clone or download and unzip the repository from github, https://github.com/p-koskey/password-locker.
-- Run from your terminal. 
+- Run from your terminal using ./run.py
 
 ## Author
 [Koskey Patience](https://github.com/p-koskey)
