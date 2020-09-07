@@ -10,12 +10,14 @@ User would like to:
 - view their various account credentials and their passwords in the application.
 - delete a credentials account that they no longer need in the application.
 
-## Technologies Used:
+## Installation requirements:
 -Python 3.8
 
 -Pyperclip
 
 -xsel
+
+-pip
 
 ## How it works:
 Open the Password-Locker folder in the terminal
