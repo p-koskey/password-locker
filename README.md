@@ -37,3 +37,14 @@ After creating a account and successfully signing in, you'll get another list of
 - Use **del**- delete credential account,
 - Use **copy** -  copy account password
 - Use **ex** - exist password locker
+
+## Setup and Installation
+- Clone or download and unzip the repository from github, https://github.com/p-koskey/password-locker.
+- Run from your terminal. 
+
+## Author
+[Koskey Patience](https://github.com/p-koskey)
+
+## License
+This project is licensed under the MIT License. 
+Copyright(2020) Patience Kosk
