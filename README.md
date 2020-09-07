@@ -18,3 +18,20 @@ User would like to:
 -xsel
 
 ## How it works:
+Open the Password-Locker folder in the terminal
+
+In the terminal enter command **./run.py**
+
+You'll get a list of short codes to help you navigate the user account:
+- Use **nw** - sign up an account, 
+- Use **sn**- sign in to your account, 
+- Use **ex** -exit Password Locker
+
+After creating a account and successfully signing in, you'll get another list of short codes to help you navigate the credentials account:
+
+- Use **cr**- create new credential account,
+- Use **vw** - view existing accounts, 
+- Use **fn** - find credentials,
+- Use **del**- delete credential account,
+- Use **copy** -  copy account password
+- Use **ex** - exist password locker
