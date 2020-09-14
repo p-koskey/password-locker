@@ -47,4 +47,4 @@ After creating a account and successfully signing in, you'll get another list of
 
 ## License
 This project is licensed under the MIT License. 
-Copyright(2020) Patience Kosk
+Copyright(2020) Patience Koskey
